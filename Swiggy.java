@@ -1,22 +1,44 @@
 class Swiggy{
-public static String takeOrder(){
+public static double takeOrder(String item){
 
-String item = "Pastries";
 if(item == "Pizza"){
-System.out.println("thank you for ordering " + item);
+System.out.println("Thank you for Ordering " + item);
+return 99.00;
 
 }
-if(item == "Burger"){
-System.out.println("thank you for ordering " + item);
+if(item == "Burger")
+{
+System.out.println("Thank you for Ordering " + item);
+return 60.00;
+}
+if(item == "SouthIndian")
+{
+System.out.println("Thank you for Ordering " + item);
+return 135;
+}
+if(item == "mosaranna")
+{
+System.out.println("Thank you for Ordering " + item);
+return 25.00;
+}
+if(item == "Pastries")
+{
+System.out.println("Thank you for Ordering " + item);
+return 50.00;
+}
+if(item == "Noodles")
+{
+System.out.println("Thank you for Ordering " + item);
+return 90.00;
+}
+
 
 }
- if(item == "Southindian"){
- System.out.println("thank you for ordering " + item);
- 
- }
- 
- 
 
-return item ;
-}
+
+return 0.00;
+
+
+
+
 }

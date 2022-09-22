@@ -1,16 +1,12 @@
 class Subtraction{
+public static void sub(int a, int b ){
 
-public static void main(String a[]){
+System.out.println(a-b);
 
-sub(7, 5);
-sub(6, 2);
- 
-}
-public static void sub(int b, int c){
-
-System.out.println(b+(~c)+1);
-}
- 
 }
 
+public static void sub(int a, int b, int c){
+System.out.println(a-b-c);
 
+}
+}
