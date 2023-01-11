@@ -1,0 +1,34 @@
+package com.xworkz.kal.configuration;
+
+
+	import org.springframework.context.annotation.Bean;
+
+	public class HardwareConfiguration {
+		
+		public HardwareConfiguration() {
+			
+		}
+		
+		@Bean
+		public String name() {
+			return "Electronics";
+			
+		}
+		@Bean
+		public Integer id() {
+			return 10;
+		}
+		@Bean 
+		public Integer gstNo() {
+			return 312;
+		}
+		@Bean
+		public String ownerName() {
+			return "laxmi";
+		}
+		@Bean
+		public String address() {
+			return "Mudhol";
+		}
+
+	}
