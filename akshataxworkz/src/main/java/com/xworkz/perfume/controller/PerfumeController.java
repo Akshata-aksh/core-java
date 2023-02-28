@@ -66,4 +66,11 @@ System.out.println("created"+this.getClass().getSimpleName());
 		System.out.println("Violations in controller");
 		return "Perfume";
 	}
+	
+	@GetMapping("/searchbycompany")
+	public String onSearchCompany(@RequestParam String company, Model model) {
+		List<PerfumeDto> list=this.service.findByCompany(company);
+		model.addAttribute("list", list);
+		return "CompanySearch";
+	}
 }

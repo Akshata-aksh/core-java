@@ -1,8 +1,11 @@
 package com.xworkz.perfume.repository;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -40,4 +43,21 @@ public class PerfumeRepositoryImpl implements PerfumeRepository {
 		return entity;
 
 	}
+	
+	@Override
+	public List<PerfumeEntity> findByCompany(String company){
+		
+		EntityManager manager=this.entityManagerFactory.createEntityManager();
+		try {
+			Query query=manager.createNamedQuery("findByCompany");
+			query.setParameter("comp", company);
+			List<PerfumeEntity> list=query.getResultList();
+			System.out.println("Total List found in repo"+list.size());
+			return list;
+		}
+		finally {
+			manager.close();
+		}
+	}
+	
 }

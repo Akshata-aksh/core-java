@@ -22,7 +22,7 @@
 <nav class="navbar navbar-light bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#"> <img
-				src=" https://w7.pngwing.com/pngs/499/882/png-transparent-delhi-air-india-limited-airline-logo-others-thumbnail.png"
+				src="C:\Users\Sridevi\Downloads\download perfume.png"
 				alt="" width="85" height="50" class="d-inline-block align text-top">
 			</a> 
 			<a href="index.jsp">home</a>

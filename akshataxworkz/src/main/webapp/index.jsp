@@ -13,7 +13,7 @@
 	crossorigin="anonymous">
 <script
 
-	src=" https://w7.pngwing.com/pngs/499/882/png-transparent-delhi-air-india-limited-airline-logo-others-thumbnail.png"
+	src="C:\Users\Sridevi\Downloads\download perfume.png"
 	integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"	
 	crossorigin="anonymous"></script>
 </head>
@@ -21,11 +21,12 @@
 <nav class="navbar navbar-light bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#"> <img
-				src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+				src="C:\Users\Sridevi\Downloads\download perfume.png"
 				alt="" width="85" height="50" class="d-inline-block align text-top">
 			</a> 
 			<a href="perfume">Perfume</a>
 						<a href="PerfumeSearch.jsp">PerfumeSearch</a>
+									<a href="CompanySearch.jsp">CompanySearch</a>
 			
 		</div>
 	</nav>

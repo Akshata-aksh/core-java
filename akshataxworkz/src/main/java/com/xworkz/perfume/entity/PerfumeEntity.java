@@ -3,10 +3,12 @@ package com.xworkz.perfume.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Perfume_table")
+@NamedQuery(name="findByCompany", query="select ent from PerfumeEntity ent where ent.company=:comp ")
 public class PerfumeEntity {
 	@Id
 	@Column(name = "p_id")

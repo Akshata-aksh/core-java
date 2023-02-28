@@ -1,6 +1,8 @@
 package com.xworkz.perfume.service;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 
 import javax.validation.ConstraintViolation;
@@ -56,16 +58,48 @@ public class PerfumeServiceImpl implements PerfumeService {
 				dto.setId(entity.getId());
 				dto.setCompany(entity.getCompany());
 				dto.setCost(entity.getCost());
-				dto.setCountry(entity.getCompany());
+				dto.setCountry(entity.getCountry());
 				dto.setName(entity.getName());
 				dto.setType(entity.getType());
 			
 			return dto;
 		}
-	}
+		}
 		return PerfumeService.super.findById(id);
+	}
+		@Override
+		public List<PerfumeDto> findByCompany(String company){
+			System.out.println("running findByCompany in service"+company);
+			
+			if(company !=null && !company.isEmpty()) {
+				System.out.println("company is valid calling repo");
+				List<PerfumeEntity> entities=this.perfumeRepository.findByCompany(company);
+				
+				//list<E> --> list<D>
+				List<PerfumeDto> listOfDto=new ArrayList<PerfumeDto>();
+				for(PerfumeEntity entity : entities) {
+					PerfumeDto dto=new PerfumeDto();
+					dto.setCompany(entity.getCompany());
+					dto.setCost(entity.getCost());
+					dto.setCountry(entity.getCountry());
+					dto.setName(entity.getName());
+					dto.setType(entity.getType());
+					dto.setId(entity.getId());
+					listOfDto.add(dto);
+					
+				}
+				System.out.println("size of dtos"+listOfDto.size());
+				System.out.println("size of dtos"+entities.size());
+               return listOfDto;
+			}
+			else {
+				System.err.println("company is invalid");
+			}
+			
+		
+		return PerfumeService.super.findByCompany(company);
 		
 			}
 		}
-	
+
 

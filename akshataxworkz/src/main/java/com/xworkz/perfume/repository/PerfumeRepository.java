@@ -1,5 +1,8 @@
 package com.xworkz.perfume.repository;
 
+import java.util.Collections;
+import java.util.List;
+
 import com.xworkz.perfume.entity.PerfumeEntity;
 
 
@@ -11,4 +14,7 @@ public interface PerfumeRepository {
 	return null;
 	
 }
+	default List<PerfumeEntity> findByCompany(String company){
+		return  Collections.emptyList();
+	}
 }

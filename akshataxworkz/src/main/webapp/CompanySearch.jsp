@@ -36,19 +36,35 @@
 </span>
 </h4>
 
-<form action="perfumesearch" method="get">
+<form action="searchbycompany" method="get">
 <pre>
-Search By id<input type="text" name="id" value="${dto.id }"/>
+Search By company<input type="text" name="company"/>
             <input type="submit" value="Search" class="btn btn-secondary"/>
 </pre>
 </form>
 <div>
-<h3>Search Results...</h3>
-Company:${dto.company}<br>
-Name:${dto.name}<br>
-Cost:${dto.cost}<br>
-Type:${dto.type}<br>
-Country:${dto.country}<br>
+
+<table>
+<tr>
+<th>ID</th>
+<th>Company</th>
+<th>Name</th>
+<th>Cost</th>
+<th>Type</th>
+<th>Country</th>
+</tr>
+
+<c:forEach items="${list}" var="t">
+<tr>
+<td>${t.id}</td>
+<td>${t.company}</td>
+<td>${t.name}</td>
+<td>${t.cost}</td>
+<td>${t.type}</td>
+<td>${t.country}</td>
+</tr>
+</c:forEach>
+</table>
 
 </div>
 </body>
